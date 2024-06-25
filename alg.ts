@@ -2,16 +2,18 @@ const bTree = "A(B(F,G),C(D,E))"
 
 let preOrder: Array<string> = []
 const walkTree = (tempTree: string): void => {
-  if (tempTree.length == 1) {
-    preOrder.push(tempTree); // returns a node
+  if ((tempTree.length == 1 && !([",", "("].includes(tempTree[0])))) {
+    preOrder.push(tempTree[0]); // push a node
     return;
   }
 
-  let newTempTree = tempTree.substring(1, tempTree.length - 1); // Remove only the first node
+  let newTempTree = tempTree;
   if (newTempTree[0] == ",")
     newTempTree = tempTree.substring(1, tempTree.length - 1); // Remove initial comma
   if (newTempTree[0] == "(" && newTempTree[tempTree.length - 1] == ")")
     newTempTree = tempTree.substring(1, tempTree.length - 2); // Remove parenthesis
+  
+  console.log(newTempTree)
 
   let open = 0; // To count "(" and ")"s
   Array(newTempTree).map((char, idx) => {
@@ -28,3 +30,7 @@ const walkTree = (tempTree: string): void => {
 
   return;
 }
+
+walkTree(bTree);
+
+console.log(preOrder)
