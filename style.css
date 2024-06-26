@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+US+Modern:wght@100..400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+	--background-color: rgb(18, 18, 18);
+	--primary-text-color: rgb(220, 220, 220);
+	--secondary-text-color: rgb(169, 169, 169);
+	--accent-color: rgb(144, 238, 144);
+	--primary-button-bg: rgb(50, 205, 50);
+	--primary-button-text: rgb(18, 18, 18);
+	--secondary-button-bg: rgb(34, 139, 34);
+	--secondary-button-text: rgb(220, 220, 220);
+	--link-color: rgb(0, 191, 255);
+	--hover-color: rgb(0, 255, 127);
+}
+
+html {
+	font-size: 10px;
+}
+
+body {
+	font-size: 1.6rem;
+	font-family: "Roboto Flex", sans-serif;
+}
+
+nav {
+	display: flex;
+}
+
+.nav__logo_container {
+	font-family: "Playwrite US Modern", cursive;
+	font-weight: 700;
+	font-size: 2rem;
+	color: var(--secondary-button-bg);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+}
+
+.nav__logo_image {
+	padding: 2rem;
+}
+
+.nav__logo_image img {
+	width: 10rem;
+}
+
+.nav__tools_container {
+	font-weight: 800;
+	letter-spacing: 1px;
+	display: flex;
+	gap: 1rem;
+	justify-content: center;
+	align-items: center;
+	padding: 5rem;
+	text-transform: uppercase;
+}
+
+.nav__tools_tool {
+	cursor: pointer;
+}
+
+main {
+	background-color: var(--background-color);
+	width: 100vw;
+	height: 100vh;
+}
+
+.node {
+	width: 2rem;
+	height: 2rem;
+	background-color: white;
+	border: 2px solid rgb(80, 200, 120);
+	border-radius: 50%;
+	padding: 1rem;
+	text-align: center;
+}
+
+.node h3 {
+	color: black;
+}
